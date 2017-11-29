@@ -2,5 +2,9 @@ server:
   port: 8761
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false             #do not register self
+    fetch-registry: false                          #close if do not need to check service
+    healthcheck:                                     #use actuator to check health
+      enable: true
+  server:
+    enable-self-preservation: false    #close self preservation when client shutdown that can remove the instance immediately
