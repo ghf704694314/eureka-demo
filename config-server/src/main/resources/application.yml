@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/forezp/SpringcloudConfig/  #公共地址不需要用户密码
+          search-paths: respo
+#          username: gaohf
+#          password: gaohf
+      label: master
+server:
+  port: 8888
