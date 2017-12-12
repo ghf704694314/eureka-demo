@@ -13,6 +13,7 @@
         <module name="hystrix-dashboard" />
         <module name="ribbon-consumer" />
         <module name="turbine" />
+        <module name="turbine-amqp" />
       </profile>
       <profile name="Annotation profile for eureka-demo" enabled="true">
         <sourceOutputDir name="../config-client/target/generated-sources/annotations" />
@@ -30,6 +31,7 @@
       <module name="hystrix-dashboard" target="1.8" />
       <module name="ribbon-consumer" target="1.8" />
       <module name="turbine" target="1.8" />
+      <module name="turbine-amqp" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

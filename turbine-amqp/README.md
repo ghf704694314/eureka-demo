@@ -1,0 +1,8 @@
+turbine-amqp
+
+将所有需要收集的监控信息都输出到消息代理中，
+然后Turbine服务再从消息代理中异步获取这些监控
+信息，最后将这些监控信息聚合并输出到Hystrix Dashboard
+中。
+
+rabbit配置暂时有问题,导致应用无法注册到eureka
