@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-client" />
         <module name="config-server" />
         <module name="eureka-client" />
         <module name="eureka-server" />
         <module name="hystrix-dashboard" />
         <module name="ribbon-consumer" />
+        <module name="turbine" />
       </profile>
       <profile name="Annotation profile for eureka-demo" enabled="true">
-        <sourceOutputDir name="../config-server/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../config-server/target/generated-test-sources/test-annotations" />
+        <sourceOutputDir name="../config-client/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../config-client/target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-client" />
+        <module name="config-server (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="eureka-server" target="1.8" />
       <module name="hystrix-dashboard" target="1.8" />
       <module name="ribbon-consumer" target="1.8" />
+      <module name="turbine" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
