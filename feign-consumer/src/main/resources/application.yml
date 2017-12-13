@@ -7,3 +7,36 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+feign:
+  client:
+    config:
+      eureka-client:   #@FeignClient("eureka-client")
+        connectTimeout: 5000 #连接超时时间
+        readTimeout: 5000        #读取时间
+        loggerLevel: full  # 配置Feign的日志级别，相当于代码配置方式中的Logger
+        errorDecoder: com.example.SimpleErrorDecoder      # Feign的错误解码器，相当于代码配置方式中的ErrorDecoder
+#        retryer: com.example.SimpleRetryer # 配置重试，相当于代码配置方式中的Retryer,
+#个人并不建议配置retryer，Spring Cloud Camden以及之后的版本中，Spring Cloud关闭了Feign的重试，而是使用Ribbon的重试。
+        requestInterceptors: # 配置拦截器，相当于代码配置方式中的RequestInterceptor
+          -com.example.FooRequestInterceptor
+          -com.example.BarRequestInterceptor
+        decode404: false
+  compression:
+    request:
+      mime-types: text/xml,application/xml,application/json #对该类数据类型进行压缩
+      min-request-size: 2048  #下限压缩大小
+logging:
+  level:
+    com.gaohf.service.HelloService: INFO
+
+#feign:
+#  client:
+#    config:
+#      default:
+#         connectTimeout: 3000
+#         readTimeout: 5000
+#         loggerLevel: basic
+
+#Edgware版ribbon属性配置查看
+#https://mp.weixin.qq.com/s?__biz=MzI4ODQ3NjE2OA==&mid=2247483787&idx=1&sn=2903b6915e140b7dcf6953570bf3172d
+#&chksm=ec3c9cecdb4b15fa9efd2bb8f472584da9439cbfd8b1278fb02ee5f06cc81eb5c143c3b9042b&scene=27#wechat_redirect

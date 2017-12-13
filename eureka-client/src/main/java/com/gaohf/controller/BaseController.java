@@ -1,11 +1,12 @@
 package com.gaohf.controller;
 
+import com.gaohf.entity.User;
 import org.apache.log4j.Logger;
+import org.bouncycastle.cert.ocsp.Req;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * com.gaohf.controller
@@ -27,5 +28,20 @@ public class BaseController {
         ServiceInstance instance=discoveryClient.getLocalServiceInstance();
         logger.info("/hello,host:"+instance.getHost()+",service_id:"+instance.getServiceId());
         return "index";
+    }
+
+    @RequestMapping(value = "/hello1",method = RequestMethod.GET)
+    public String hello(@RequestHeader String name){
+        return "Hello"+name;
+    }
+
+    @RequestMapping(value = "/hello2",method = RequestMethod.GET)
+    public User hello(@RequestHeader String name,@RequestHeader Integer age){
+        return new User(name,age);
+    }
+
+    @RequestMapping(value = "/hello3",method = RequestMethod.POST)
+    public String hello(@RequestBody User user){
+        return "Hello"+user.getName()+","+user.getAge();
     }
 }

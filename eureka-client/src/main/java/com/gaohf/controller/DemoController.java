@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo")
 public class DemoController extends BaseController {
 
-    @RequestMapping("/id")
+    @RequestMapping(value = "/id")
     public String getString(Long id){
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("id",id);
