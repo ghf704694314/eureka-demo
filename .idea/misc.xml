@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/ribbon-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/turbine/pom.xml" />
         <option value="$PROJECT_DIR$/turbine-amqp/pom.xml" />
+        <option value="$PROJECT_DIR$/feign-consumer/pom.xml" />
       </list>
     </option>
   </component>

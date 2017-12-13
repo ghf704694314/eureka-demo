@@ -10,6 +10,7 @@
         <module name="config-server" />
         <module name="eureka-client" />
         <module name="eureka-server" />
+        <module name="feign-consumer" />
         <module name="hystrix-dashboard" />
         <module name="ribbon-consumer" />
         <module name="turbine" />
@@ -28,6 +29,7 @@
       <module name="eureka-client" target="1.8" />
       <module name="eureka-demo" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="feign-consumer" target="1.8" />
       <module name="hystrix-dashboard" target="1.8" />
       <module name="ribbon-consumer" target="1.8" />
       <module name="turbine" target="1.8" />
