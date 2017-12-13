@@ -18,6 +18,7 @@
 		<module>turbine</module>
 		<module>turbine-amqp</module>
 		<module>feign-consumer</module>
+		<module>api-gateway</module>
 	</modules>
 
 	<name>eureka-demo</name>

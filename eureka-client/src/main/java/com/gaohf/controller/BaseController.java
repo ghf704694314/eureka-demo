@@ -27,7 +27,7 @@ public class BaseController {
     public String index(){
         ServiceInstance instance=discoveryClient.getLocalServiceInstance();
         logger.info("/hello,host:"+instance.getHost()+",service_id:"+instance.getServiceId());
-        return "index";
+        return "hello SpringCloud";
     }
 
     @RequestMapping(value = "/hello1",method = RequestMethod.GET)
