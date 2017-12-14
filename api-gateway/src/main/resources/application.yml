@@ -5,18 +5,43 @@ server:
   port: 5555
 zuul:
   routes:
-#    api-a:
-#      path: /api-a/**
-#      serviceId: eureka-client
-#    api-b:
-#      path: /api-b/**
-#      serviceId: feign-consumer
-    eureka-client: /eureka-client/** #用来替代上面path和serviceId的配置
-    feign-consumer: /feign-consumer/**
+    eureka-client:
+      path: /eureka-client/**
+      serviceId: eureka-client
+    feign-consumer:
+      path: /feign-consumer/**
+      serviceId: feign-consumer
+#      retryable: false #关闭指定实例的重试机制
+#    eureka-client: /eureka-client/** #用来替代上面path和serviceId的配置
+#    feign-consumer: /feign-consumer/** # ?:匹配任意单个字符 *:匹配任意数量的字符 **:匹配任意数量的字符,支持多级目录
+  add-host-header: true #保证登录后重定向到最初的服务端请求地址,而不是指向具体的服务实例地址
+#  retryable: false #关闭全局重试机制
+
+#  prefix: /api #路由前缀
+#  strip-prefix: false #关闭移除代理前缀的动作
+#  ignored-patterns:  /**/hello/** #不希望该地址被路由
+#  ignored-services: eureka-client  #默认情况下会为所有Eureka上的服务创建路由
+#  可以使用ignored-services 参数来设置一个服务名匹配表达式过滤
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+hystrix:
+  command:
+    feign-consumer:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000  #hystrix超时设置
+#feign-consumer:
+#  ribbon:
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#    ListOfServers: http://example1.com,http://example2.com
+#    ConnectTimeout: 1000
+#    ReadTimeout: 3000
+#    MaxTotalHttpConnections: 500
+#    MaxConnectionsPerHost: 100
+
 #zuul:
 #  routes:
 #    api-a-url:
