@@ -1,6 +1,6 @@
 package com.gaohf;
 
-import com.gaohf.filter.AccessFilter;
+//import com.gaohf.filter.AccessFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
@@ -13,10 +13,10 @@ import org.springframework.context.annotation.Bean;
 //@SpringBootApplication
 public class ApiGatewayApplication {
 
-	@Bean
-	public AccessFilter accessFilter(){
-		return new AccessFilter();
-	}
+//	@Bean
+//	public AccessFilter accessFilter(){
+//		return new AccessFilter();
+//	}
 
 	/**
 	 * 创建与版本号对应的路由规则 如:/appName-v1 -->/v1/appName
