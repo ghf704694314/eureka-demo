@@ -11,17 +11,17 @@ zuul:
     feign-consumer:
       path: /feign-consumer/**
       serviceId: feign-consumer
-#      retryable: false #¹Ø±ÕÖ¸¶¨ÊµÀıµÄÖØÊÔ»úÖÆ
-#    eureka-client: /eureka-client/** #ÓÃÀ´Ìæ´úÉÏÃæpathºÍserviceIdµÄÅäÖÃ
-#    feign-consumer: /feign-consumer/** # ?:Æ¥ÅäÈÎÒâµ¥¸ö×Ö·û *:Æ¥ÅäÈÎÒâÊıÁ¿µÄ×Ö·û **:Æ¥ÅäÈÎÒâÊıÁ¿µÄ×Ö·û,Ö§³Ö¶à¼¶Ä¿Â¼
-  add-host-header: true #±£Ö¤µÇÂ¼ºóÖØ¶¨Ïòµ½×î³õµÄ·şÎñ¶ËÇëÇóµØÖ·,¶ø²»ÊÇÖ¸Ïò¾ßÌåµÄ·şÎñÊµÀıµØÖ·
-#  retryable: false #¹Ø±ÕÈ«¾ÖÖØÊÔ»úÖÆ
+#      retryable: false #å…³é—­æŒ‡å®šå®ä¾‹çš„é‡è¯•æœºåˆ¶
+#    eureka-client: /eureka-client/** #ç”¨æ¥æ›¿ä»£ä¸Šé¢pathå’ŒserviceIdçš„é…ç½®
+#    feign-consumer: /feign-consumer/** # ?:åŒ¹é…ä»»æ„å•ä¸ªå­—ç¬¦ *:åŒ¹é…ä»»æ„æ•°é‡çš„å­—ç¬¦ **:åŒ¹é…ä»»æ„æ•°é‡çš„å­—ç¬¦,æ”¯æŒå¤šçº§ç›®å½•
+  add-host-header: true #ä¿è¯ç™»å½•åé‡å®šå‘åˆ°æœ€åˆçš„æœåŠ¡ç«¯è¯·æ±‚åœ°å€,è€Œä¸æ˜¯æŒ‡å‘å…·ä½“çš„æœåŠ¡å®ä¾‹åœ°å€
+#  retryable: false #å…³é—­å…¨å±€é‡è¯•æœºåˆ¶
 
-#  prefix: /api #Â·ÓÉÇ°×º
-#  strip-prefix: false #¹Ø±ÕÒÆ³ı´úÀíÇ°×ºµÄ¶¯×÷
-#  ignored-patterns:  /**/hello/** #²»Ï£Íû¸ÃµØÖ·±»Â·ÓÉ
-#  ignored-services: eureka-client  #Ä¬ÈÏÇé¿öÏÂ»áÎªËùÓĞEurekaÉÏµÄ·şÎñ´´½¨Â·ÓÉ
-#  ¿ÉÒÔÊ¹ÓÃignored-services ²ÎÊıÀ´ÉèÖÃÒ»¸ö·şÎñÃûÆ¥Åä±í´ïÊ½¹ıÂË
+#  prefix: /api #è·¯ç”±å‰ç¼€
+#  strip-prefix: false #å…³é—­ç§»é™¤ä»£ç†å‰ç¼€çš„åŠ¨ä½œ
+#  ignored-patterns:  /**/hello/** #ä¸å¸Œæœ›è¯¥åœ°å€è¢«è·¯ç”±
+#  ignored-services: eureka-client  #é»˜è®¤æƒ…å†µä¸‹ä¼šä¸ºæ‰€æœ‰Eurekaä¸Šçš„æœåŠ¡åˆ›å»ºè·¯ç”±
+#  å¯ä»¥ä½¿ç”¨ignored-services å‚æ•°æ¥è®¾ç½®ä¸€ä¸ªæœåŠ¡ååŒ¹é…è¡¨è¾¾å¼è¿‡æ»¤
 eureka:
   client:
     service-url:
@@ -32,7 +32,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 2000  #hystrix³¬Ê±ÉèÖÃ
+            timeoutInMilliseconds: 2000  #hystrixè¶…æ—¶è®¾ç½®
 #feign-consumer:
 #  ribbon:
 #    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
@@ -45,14 +45,14 @@ hystrix:
 #zuul:
 #  routes:
 #    api-a-url:
-#      path: /api-a-url/**           #´«Í³Â·ÓÉ·½Ê½,µ±·ÃÎÊlocalhost:5555/api-a-url/helloÊ±,
-#      url: http://localhost:8080   #APIÍø¹Ø·şÎñ»á½«¸ÃÇëÇóÂ·ÓÉµ½http://localhost:8080/helloÌá¹©µÄÎ¢·şÎñ½Ó¿ÚÉÏ
+#      path: /api-a-url/**           #ä¼ ç»Ÿè·¯ç”±æ–¹å¼,å½“è®¿é—®localhost:5555/api-a-url/helloæ—¶,
+#      url: http://localhost:8080   #APIç½‘å…³æœåŠ¡ä¼šå°†è¯¥è¯·æ±‚è·¯ç”±åˆ°http://localhost:8080/helloæä¾›çš„å¾®æœåŠ¡æ¥å£ä¸Š
 
 #zuul:
 #  routes:
 #    api-a-url:
-#      path: /api-a-url/**           #´«Í³Â·ÓÉ·½Ê½,¶à½ÚµãÅäÖÃ,µ±·ÃÎÊlocalhost:5555/api-a-url/helloÊ±,
-#      serviceId: eureka-client   #APIÍø¹Ø·şÎñ»á½«¸ÃÇëÇóÂ·ÓÉµ½eureka-client/helloÌá¹©µÄÎ¢·şÎñ½Ó¿ÚÉÏ
+#      path: /api-a-url/**           #ä¼ ç»Ÿè·¯ç”±æ–¹å¼,å¤šèŠ‚ç‚¹é…ç½®,å½“è®¿é—®localhost:5555/api-a-url/helloæ—¶,
+#      serviceId: eureka-client   #APIç½‘å…³æœåŠ¡ä¼šå°†è¯¥è¯·æ±‚è·¯ç”±åˆ°eureka-client/helloæä¾›çš„å¾®æœåŠ¡æ¥å£ä¸Š
 #eureka-client:
 #  ribbon:
 #    listOfServers: http://localhost:8080/,http://localhost:8081/

@@ -5,10 +5,8 @@
     <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway-dynamic-filter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway-dynamic-route" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/config-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/eureka-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/feign-consumer" charset="UTF-8" />
