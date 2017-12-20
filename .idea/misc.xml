@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/feign-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway-dynamic-route/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway-dynamic-filter/pom.xml" />
       </list>
     </option>
   </component>

@@ -5,10 +5,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ghf704694314/configRepo  #公共地址不需要用户密码
+          uri: https://github.com/ghf704694314/configRepo
           search-paths: userConfig
-#          username: 704694314@qq.com
-#          password: 88979150aa
+          username: 704694314@qq.com
+          password: 88979150aa
       label: master
 server:
   port: 8888

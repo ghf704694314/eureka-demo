@@ -20,6 +20,7 @@
 		<module>feign-consumer</module>
 		<module>api-gateway</module>
 		<module>api-gateway-dynamic-route</module>
+		<module>api-gateway-dynamic-filter</module>
 	</modules>
 
 	<name>eureka-demo</name>
