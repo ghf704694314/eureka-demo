@@ -2,6 +2,12 @@ package com.gaohf.controller;
 
 import com.netflix.zuul.FilterLoader;
 import com.netflix.zuul.ZuulFilter;
+import org.aopalliance.aop.Advice;
+import org.springframework.aop.aspectj.AspectJAfterReturningAdvice;
+import org.springframework.aop.framework.AopProxy;
+import org.springframework.aop.framework.adapter.AdvisorAdapter;
+import org.springframework.aop.framework.adapter.DefaultAdvisorAdapterRegistry;
+import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +23,6 @@ import java.util.List;
  */
 @RestController
 public class BaseController {
-
 
     @RequestMapping("/filter/getAll")
     public void getAllZuulFilters(){

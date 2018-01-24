@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/api-gateway-dynamic-filter/api-gateway-dynamic-filter.iml" filepath="$PROJECT_DIR$/api-gateway-dynamic-filter/api-gateway-dynamic-filter.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-gateway-dynamic-route/api-gateway-dynamic-route.iml" filepath="$PROJECT_DIR$/api-gateway-dynamic-route/api-gateway-dynamic-route.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-client/config-client.iml" filepath="$PROJECT_DIR$/config-client/config-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
