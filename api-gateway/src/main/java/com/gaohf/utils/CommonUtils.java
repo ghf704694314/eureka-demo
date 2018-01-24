@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by shade on 2017/7/29.
- */
 public class CommonUtils {
 
     private static Logger logger = LoggerFactory.getLogger(CommonUtils.class);

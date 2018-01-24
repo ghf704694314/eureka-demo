@@ -3,9 +3,6 @@ package com.gaohf.config;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by shade on 2017/7/26.
- */
 public class Constants {
 
     public static final String RSA_PUBLIC_KEY =

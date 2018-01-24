@@ -17,9 +17,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by shade on 2017/7/26.
- */
 @Component
 public class RedisLimitUtils {
 

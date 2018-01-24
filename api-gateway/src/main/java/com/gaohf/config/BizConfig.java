@@ -3,9 +3,6 @@ package com.gaohf.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-/**
- * Created by shade on 2017/4/6.
- */
 @Configuration
 @Scope("singleton")
 public class BizConfig {

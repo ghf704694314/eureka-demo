@@ -20,9 +20,6 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.stereotype.Service;
 
 
-/**
- * Created by xuqinghua on 2017/3/20.
- */
 @Configuration
 @EnableJpaAuditing
 @Service

@@ -7,8 +7,6 @@ import com.gaohf.enums.EnumClientError;
 import org.springframework.security.core.AuthenticationException;
 
 /**
- * @author hanyong
- * @Date 2017/1/4
  */
 public class ClientException extends AuthenticationException {
     private String errorCode;
